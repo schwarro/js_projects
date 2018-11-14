@@ -9,7 +9,7 @@ var powerPellets = 4;
 var inky = {
   menu_option: '1',
   name: 'Inky',
-  colour: 'Red',
+  color: 'Red',
   character: 'Shadow',
   edible: false
 };
@@ -69,10 +69,14 @@ function displayPowerPellets() {
 function displayMenu() {
   console.log('\n\nSelect Option:\n');  // each \n creates a new line
   console.log('(d) Eat Dot');
-  console.log('(1) Eat Inky');
-  console.log('(2) Eat Blinky');
-  console.log('(3) Eat Pinky');
-  console.log('(4) Eat Clyde');
+  if (powerPellets > 0) {
+    console.log('(p) Eat Power Pellet');
+  } else {
+    console.log('No More Power Pellets');
+  };
+  for (var i = 0; i < ghosts.length; i++) {
+    console.log('(' + (i + 1) + ') Eat ' + ghosts[i].name + ' (' + isEdible(ghosts[i]) +     ')'       );
+  }
   console.log('(q) Quit');
 }
 
@@ -92,11 +96,12 @@ function eatGhost(ghost) {
   if(ghosts[ghost-1]) {
     if(ghosts[ghost-1].edible === false) {
       lives -= 1;
-      console.log("\n" + ghosts[ghost].name + " that has the colour: " + ghosts[ghost].color + " is not edible!");
+      console.log("\n" + ghosts[ghost-1].name + " that has the colour " + ghosts[ghost-1].color + " is not edible!");
       gameOver(lives);
     } else {
       score += 200;
-      console.log("\nPacman just ate " + ghosts[ghost].name + " that has the colour: " + ghosts[ghost].color + "!");
+      ghosts[ghost-1].edible = false;
+      console.log("\nPacman just ate " + ghosts[ghost-1].name + " and is " + ghosts[ghost-1].character + "!");
     }
   }
 }
@@ -106,6 +111,24 @@ function gameOver(lives) {
     process.exit();
   }
 }
+
+function eatPowerPellet() {
+  score += 50;
+  powerPellets -= 1;
+  for (var i = 0; i < ghosts.length; i++) {
+    ghosts[i].edible = true;
+  }
+}
+
+function isEdible(ghost){
+  if(ghost.edible === false) {
+    return 'inedible';
+  } else {
+    return 'edible';
+  }
+}
+
+
 
 
 // Process Player's Input
@@ -117,6 +140,29 @@ function processInput(key) {
       break;
     case 'd':
       eatDot();
+      break;
+    case 'p':
+      if (powerPellets > 0) {
+        eatPowerPellet()
+      } else {
+        console.log('\nNo more Power Pellets!');
+      };
+      break;
+    case '1':
+      eatGhost(1);
+      gameOver();
+      break;
+    case '2':
+      eatGhost(2);
+      gameOver();
+      break;
+    case '3':
+      eatGhost(3);
+      gameOver();
+      break;
+    case '4':
+      eatGhost(4);
+      gameOver();
       break;
     default:
       console.log('\nInvalid Command!');
@@ -141,7 +187,7 @@ drawScreen();
 stdin.on('data', function(key) {
   process.stdout.write(key);
   processInput(key);
-  setTimeout(drawScreen, 300); // The command prompt will flash a message for 300 milliseoncds before it re-draws the screen. You can adjust the 300 number to increase this.
+  setTimeout(drawScreen, 1000); // The command prompt will flash a message for 300 milliseoncds before it re-draws the screen. You can adjust the 300 number to increase this.
 });
 
 // Player Quits
