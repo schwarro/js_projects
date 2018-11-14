@@ -95,6 +95,12 @@ function eatGhost(ghost) {
   }
 }
 
+functin gameOver(lives) {
+  if (lives < 0) {
+    process.exit();
+  }
+}
+
 
 // Process Player's Input
 function processInput(key) {
