@@ -1,6 +1,7 @@
 // Setup initial game stats
 var score = 0;
 var lives = 2;
+var powerPellets = 4;
 
 
 // Define your ghosts here
@@ -47,6 +48,7 @@ function drawScreen() {
   clearScreen();
   setTimeout(function() {
     displayStats();
+    displayPowerPellets();
     displayMenu();
     displayPrompt();
   }, 10);
@@ -58,6 +60,10 @@ function clearScreen() {
 
 function displayStats() {
   console.log('Score: ' + score + '     Lives: ' + lives);
+}
+
+function displayPowerPellets() {
+  console.log('\nPower Pellets: ' + powerPellets)
 }
 
 function displayMenu() {
@@ -95,7 +101,7 @@ function eatGhost(ghost) {
   }
 }
 
-functin gameOver(lives) {
+function gameOver(lives) {
   if (lives < 0) {
     process.exit();
   }
