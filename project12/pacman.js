@@ -31,13 +31,15 @@ var pinky = {
 
 var clyde = {
   menu_option: '4',
-  name = 'Clyde',
-  color = 'Orange',
-  character = 'Pokey',
+  name: 'Clyde',
+  color: 'Orange',
+  character: 'Pokey',
   edible: false
 };
 
 // replace this comment with your four ghosts setup as objects
+
+var ghosts = [inky, blinky, pinky, clyde];
 
 
 // Draw the screen functionality
@@ -61,6 +63,10 @@ function displayStats() {
 function displayMenu() {
   console.log('\n\nSelect Option:\n');  // each \n creates a new line
   console.log('(d) Eat Dot');
+  console.log('(1) Eat Inky');
+  console.log('(2) Eat Blinky');
+  console.log('(3) Eat Pinky');
+  console.log('(4) Eat Clyde');
   console.log('(q) Quit');
 }
 
@@ -74,6 +80,19 @@ function displayPrompt() {
 function eatDot() {
   console.log('\nChomp!');
   score += 10;
+}
+
+function eatGhost(ghost) {
+  if(ghosts[ghost-1]) {
+    if(ghosts[ghost-1].edible === false) {
+      lives -= 1;
+      console.log("\n" + ghosts[ghost].name + " that has the colour: " + ghosts[ghost].color + " is not edible!");
+      gameOver(lives);
+    } else {
+      score += 200;
+      console.log("\nPacman just ate " + ghosts[ghost].name + " that has the colour: " + ghosts[ghost].color + "!");
+    }
+  }
 }
 
 
