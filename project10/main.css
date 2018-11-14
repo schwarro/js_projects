@@ -1,0 +1,33 @@
+* {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+button {
+  background-color: rga(82, 186, 179);
+  border-radius: 6px;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  text-transform: uppercase;
+  width: 200px;
+  cursor: pointer;
+  display: inline;
+}
+
+#placeholder {
+  height: 20px;
+  width: 100px;
+  padding: 50px;
+  margin: 50px auto;
+  border: 1px solid grey;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+#operator {
+  height: 100px;
+  width: 200px;
+  font-size: 30px;
+  text-align: center;
+}
