@@ -62,24 +62,6 @@ function displayStats() {
   console.log('Score: ' + score + '     Lives: ' + lives);
 }
 
-function displayPowerPellets() {
-  console.log('\nPower Pellets: ' + powerPellets)
-}
-
-function displayMenu() {
-  console.log('\n\nSelect Option:\n');  // each \n creates a new line
-  console.log('(d) Eat Dot');
-  if (powerPellets > 0) {
-    console.log('(p) Eat Power Pellet');
-  } else {
-    console.log('No More Power Pellets');
-  };
-  for (var i = 0; i < ghosts.length; i++) {
-    console.log('(' + (i + 1) + ') Eat ' + ghosts[i].name + ' (' + isEdible(ghosts[i]) +     ')'       );
-  }
-  console.log('(q) Quit');
-}
-
 function displayPrompt() {
   // process.stdout.write is similar to console.log except it doesn't add a new line after the text
   process.stdout.write('\nWaka Waka :v '); // :v is the Pac-Man emoji.
@@ -126,6 +108,24 @@ function isEdible(ghost){
   } else {
     return 'edible';
   }
+}
+
+function displayPowerPellets() {
+  console.log('\nPower Pellets: ' + powerPellets)
+}
+
+function displayMenu() {
+  console.log('\n\nSelect Option:\n');  // each \n creates a new line
+  console.log('(d) Eat Dot');
+  if (powerPellets > 0) {
+    console.log('(p) Eat Power Pellet');
+  } else {
+    console.log('No More Power Pellets');
+  };
+  for (var i = 0; i < ghosts.length; i++) {
+    console.log('(' + (i + 1) + ') Eat ' + ghosts[i].name + ' (' + isEdible(ghosts[i]) +     ')'       );
+  }
+  console.log('(q) Quit');
 }
 
 
