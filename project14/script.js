@@ -23,7 +23,7 @@ function startSlide(){
 function slideLeft() {
   reset();
   sliderImages[current - 1].style.display = 'block';
-  current--;
+  current--;git
 }
 
 //Show Next
