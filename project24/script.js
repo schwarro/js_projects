@@ -23,3 +23,15 @@ if (hour >= 6 && hour < 12) {
 } else {
   console.log('Good Evening!');
 }
+
+//loops
+//for loop
+for (let x = 1; x <= 5; x++) {
+  if (x % 2 !== 0) console.log(x);
+}
+
+console.log('break');
+
+for (let i = 5; i >= 1; i--) {
+  if (i % 2 !== 0) console.log(i);
+}
