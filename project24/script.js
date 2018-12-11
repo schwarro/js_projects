@@ -73,3 +73,14 @@ console.log(totals);
 //value, index, array
 const filtered = numbers.filter(n  => n  >= 3);
 console.log(filtered);
+
+//array.map
+const items = filtered.map(n => '<li>' + n + '</li>');
+console.log(items);
+const html = '<ul>' + items.join('') + '</ul>';
+console.log(html);
+const item = filtered.map(n => {
+  const obj = {value: n };
+  return obj;
+});
+console.log(item);
