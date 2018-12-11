@@ -71,5 +71,5 @@ console.log(totals);
 
 //array.filter
 //value, index, array
-const filtered = numbers.filter(n => n >= 3);
+const filtered = numbers.filter(n  => n  >= 3);
 console.log(filtered);
