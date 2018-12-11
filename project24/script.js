@@ -68,3 +68,8 @@ const total = numbers.reduce((accumulator, currentValue) => {
 const totals = numbers.reduce((accumulator, currentValue) => accumulator + currentValue);
 console.log(total);
 console.log(totals);
+
+//array.filter
+//value, index, array
+const filtered = numbers.filter(n => n >= 3);
+console.log(filtered);
