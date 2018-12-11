@@ -84,3 +84,34 @@ const item = filtered.map(n => {
   return obj;
 });
 console.log(item);
+
+//this
+//method -> obj
+// const video = {
+//   title: 'a',
+//   play() {
+//     console.log(this);
+//   }
+// };
+//
+// video.stop = function() {
+//   console.log(this);
+// };
+//
+// video.play();
+
+//function -> global
+const video = {
+  title: 'a',
+  play() {
+    console.log(this);
+  }
+};
+
+function Video(title) {
+  this.title = title;
+  console.log(this);
+}
+
+const v = new Video('a');
+const c = new Video('d');
