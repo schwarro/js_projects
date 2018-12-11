@@ -35,3 +35,17 @@ console.log('break');
 for (let i = 5; i >= 1; i--) {
   if (i % 2 !== 0) console.log(i);
 }
+
+//var, let and const
+function start(){
+  for(var i = 0; i < 5; i++){
+    if (true) {
+      let color = 'red';
+    }
+  }
+  console.log(color);
+}
+start();
+
+var color = 'blue';
+let age = 30;
