@@ -49,3 +49,22 @@ start();
 
 var color = 'blue';
 let age = 30;
+
+console.log('break');
+
+//array.reduce
+const numbers = [1, 2, 3, 4];
+
+let sum = 0;
+for (let n of numbers){
+  sum += n;
+}
+console.log(sum);
+
+const total = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0);
+
+const totals = numbers.reduce((accumulator, currentValue) => accumulator + currentValue);
+console.log(total);
+console.log(totals);
