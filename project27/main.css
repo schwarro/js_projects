@@ -33,10 +33,33 @@ body {
   padding: 20px;
   width: 70%;
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+  animation-name: modalOpen;
+  animation-duration: 1s;
+}
+
+.modal-header h2, .modal-footer h3 {
+  margin: 0;
+}
+
+.modal-header {
+  background: coral;
+  padding: 15px;
+  color: #ffffff;
+}
+
+.modal-body {
+  padding: 10px 20px;
+}
+
+.modal-footer {
+  background: coral;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
 }
 
 #closeBtn {
-  color: #cccccc;
+  color: #ffffff;
   float: right;
   font-size: 30px;
 }
@@ -45,4 +68,9 @@ body {
   cursor: pointer;
   color: #000000;
   text-decoration: none;
+}
+
+@keyframes modalOpen {
+  from{opacity: 0}
+  to{opacity: 1}
 }
