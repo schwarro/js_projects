@@ -114,3 +114,23 @@ var itemList = document.querySelector('#items');
 // // previousElementSibling
 // console.log(itemList.previousElementSibling);
 // itemList.previousElementSibling.style.color= 'green';
+
+// create Element
+
+// create a div
+// var newDiv = document.createElement('div');
+//
+// newDiv.className = 'helloClass';
+// newDiv.id = 'helloId';
+// newDiv.setAttribute('title', 'Hello Attribute');
+//
+// var newDivText = document.createTextNode('Hello World');
+// newDiv.appendChild(newDivText);
+//
+// var container = document.querySelector('header .container');
+// var h1 = document.querySelector('header h1');
+// console.log(newDiv);
+//
+// newDiv.style.fontSize = '30px';
+//
+// container.insertBefore(newDiv, h1);
