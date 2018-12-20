@@ -69,4 +69,48 @@
 //   odd[i].style.backgroundColor = 'blue';
 // }
 
+
+
 //////////////////////////////////////////////
+
+// Traversing the DOM
+var itemList = document.querySelector('#items');
+
+// parent node property
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentNode.parentNode);
+
+// parent element property
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentElement.parentElement);
+
+// child node property
+// console.log(itemList.childNodes);
+// console.log(itemList.children);
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor = 'yellow';
+
+// first child
+// console.log(itemList.firstChild);
+// //firstElementChild
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent = 'Hello 1';
+
+// last child
+// console.log(itemList.lastChild);
+// //lastElementChild
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent = 'Hello 1';
+
+// nextSibling
+// console.log(itemList.nextSibling);
+// // nextElementSibling
+// console.log(itemList.nextElementSibling);
+
+// previousSibling
+// console.log(itemList.previousSibling);
+// // previousElementSibling
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color= 'green';
