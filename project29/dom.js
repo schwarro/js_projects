@@ -74,7 +74,7 @@
 //////////////////////////////////////////////
 
 // Traversing the DOM
-var itemList = document.querySelector('#items');
+// var itemList = document.querySelector('#items');
 
 // parent node property
 // console.log(itemList.parentNode);
@@ -134,3 +134,38 @@ var itemList = document.querySelector('#items');
 // newDiv.style.fontSize = '30px';
 //
 // container.insertBefore(newDiv, h1);
+
+//////////////////////////////////////////////
+
+//Events//
+
+// var button = document.getElementById('button').addEventListener('click', function(){
+//   console.log(123);
+// })
+
+var button = document.getElementById('button');
+var box = document.getElementById('box');
+
+// button.addEventListener('click', runEvent);
+// button.addEventListener('dblclick', runEvent);
+// button.addEventListener('mousedown', runEvent);
+// button.addEventListener('mouseup', runEvent);
+
+
+// function buttonClick(e){
+  // console.log('Button clicked');
+  // document.getElementById('header-title').textContent = 'Changed';
+  // document.querySelector('#main').style.backgroundColor = '#f4f4f4';
+  // var output = document.getElementById('output');
+  // output.innerHTML = '<h3>'+e.target.id+'</h3';
+  // console.log(e.type);
+//   console.log(e.clientX);
+//   console.log(e.clientY);
+//   console.log(e.offsetX);
+//   console.log(e.offsetY);
+//   console.log(e.shiftKey);
+// }
+
+function runEvent(e){
+  console.log('EVENT TYPE: '+e.type);
+}
