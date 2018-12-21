@@ -143,8 +143,8 @@
 //   console.log(123);
 // })
 
-var button = document.getElementById('button');
-var box = document.getElementById('box');
+// var button = document.getElementById('button');
+// var box = document.getElementById('box');
 
 // button.addEventListener('click', runEvent);
 // button.addEventListener('dblclick', runEvent);
@@ -166,6 +166,40 @@ var box = document.getElementById('box');
 //   console.log(e.shiftKey);
 // }
 
-function runEvent(e){
-  console.log('EVENT TYPE: '+e.type);
+// box.addEventListener('mouseenter', runEvent);
+// box.addEventListener('mouseleave', runEvent);
+// box.addEventListener('mouseover', runEvent);
+// box.addEventListener('mouseout', runEvent);
+// box.addEventListener('mousemove', runEvent);
+
+// var itemInput = document.querySelector('input[type="text"]');
+// var form = document.querySelector('form');
+
+// itemInput.addEventListener('keyup', runEvent);
+// itemInput.addEventListener('keydown', runEvent);
+// itemInput.addEventListener('keypress', runEvent);
+
+// itemInput.addEventListener('focus', runEvent);
+// itemInput.addEventListener('blur', runEvent);
+
+// itemInput.addEventListener('cut', runEvent);
+// itemInput.addEventListener('paste', runEvent);
+
+// itemInput.addEventListener('input', runEvent);
+
+// var select = document.querySelector('select');
+//
+// select.addEventListener('change', runEvent);
+
+// form.addEventListener('submit', runEvent);
+//
+// function runEvent(e){
+//   e.preventDefault();
+//   console.log('EVENT TYPE: '+e.type);
+//
+//   console.log(e.target.value);
+
+  // document.getElementById('output').innerHTML = '<h3>'+e.target.value+'</h3>';
+
+  // box.style.backgroundColor = 'rgb('+e.offsetX+','+e.offsetY+',50)';
 }
